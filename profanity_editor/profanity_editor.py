@@ -1,7 +1,7 @@
 # =============================================================================
 # 1. read text from a document
 # 2. check for curse words
-# Code returns error urllib.urlopen deprecated with Python 3
+# Code returns error urllib.urlopen deprecated with Python 3. Fixed by using quote function
 # =============================================================================
 import urllib.request
 
@@ -22,7 +22,13 @@ def profanity_check(text_to_check):
     quoted_text_to_check = urllib.request.quote(text_to_check)
     with urllib.request.urlopen ("http://www.wdylike.appspot.com/?q="+quoted_text_to_check) as connection:
         output = connection.read()
-    print(output)
+    #print(output)
     connection.close()
-    
+    if b"true" in output:
+        print ("profanity alert!")
+    elif b"false" in output:
+        print ("this document has no curse words!")
+    else:
+        print ("could not scan the document properly")
+        
 read_text()
