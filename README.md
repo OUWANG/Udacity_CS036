@@ -1,3 +1,2 @@
 # Udacity_CS036
-Python project showcase from CS036, Udacity
-
+Python project showcase from Udacity CS036
