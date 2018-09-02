@@ -28,4 +28,8 @@ sausage_party = media.Movie("Sausage Party",
 
 movies = [toy_story_3, avatar, crazy_rich_asians, mission_impossible_fallout, ratatouille, sausage_party]
 
-fresh_tomatoes.open_movies_page(movies)
+#fresh_tomatoes.open_movies_page(movies)
+#print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
+print(media.Movie.__name__)
+print(media.Movie.__module__)

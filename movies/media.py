@@ -8,7 +8,6 @@ Created on Sat Sep  1 21:23:31 2018
 
 """
 Notes:
-    
 The double underscore is python telling us that this function is reserved, a special function or method
 class - a blue print with both data and methods
 instance - (toy story, avatar)
@@ -16,10 +15,15 @@ constructor - the init function
 self - the object being created
 instance variables - (titile, storyline, etc)
 instance method - functions within class
+class variables - shared variables by all instances(VALID_RATINGS)
 """
 import webbrowser
 
 class Movie():
+    """
+    This class provides a way to store movie related information.
+    """
+    VALID_RATINGS = ["G","PG","PG-13","R"]
     def __init__(self, movie_title, movie_storyline, poster_image,trailer_youtube):
         self.title = movie_title
         self.storyline = movie_storyline
