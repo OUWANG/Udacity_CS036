@@ -32,3 +32,4 @@ def profanity_check(text_to_check):
         print ("could not scan the document properly")
         
 read_text()
+nqu
